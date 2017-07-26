@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Jero
 //
-//  Created by Laks Gandikota on 7/26/17.
-//  Copyright © 2017 Laks Gandikota. All rights reserved.
+//  Created by Laksh Gandikota on 7/26/17.
+//  Copyright © 2017 Laksh Gandikota. All rights reserved.
 //
 
 import UIKit
