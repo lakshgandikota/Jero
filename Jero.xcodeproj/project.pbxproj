@@ -9,18 +9,14 @@
 /* Begin PBXBuildFile section */
 		A397532D1F29165700E9897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397532C1F29165700E9897A /* AppDelegate.swift */; };
 		A397532F1F29165700E9897A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397532E1F29165700E9897A /* ViewController.swift */; };
-		A39753321F29165700E9897A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39753301F29165700E9897A /* Main.storyboard */; };
 		A39753341F29165700E9897A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A39753331F29165700E9897A /* Assets.xcassets */; };
-		A39753371F29165700E9897A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39753351F29165700E9897A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A39753291F29165700E9897A /* Jero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A397532C1F29165700E9897A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A397532E1F29165700E9897A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A39753311F29165700E9897A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A39753331F29165700E9897A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A39753361F29165700E9897A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A39753381F29165700E9897A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,9 +52,7 @@
 			children = (
 				A397532C1F29165700E9897A /* AppDelegate.swift */,
 				A397532E1F29165700E9897A /* ViewController.swift */,
-				A39753301F29165700E9897A /* Main.storyboard */,
 				A39753331F29165700E9897A /* Assets.xcassets */,
-				A39753351F29165700E9897A /* LaunchScreen.storyboard */,
 				A39753381F29165700E9897A /* Info.plist */,
 			);
 			path = Jero;
@@ -96,6 +90,7 @@
 				TargetAttributes = {
 					A39753281F29165700E9897A = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -122,9 +117,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A39753371F29165700E9897A /* LaunchScreen.storyboard in Resources */,
 				A39753341F29165700E9897A /* Assets.xcassets in Resources */,
-				A39753321F29165700E9897A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,25 +134,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A39753301F29165700E9897A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A39753311F29165700E9897A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A39753351F29165700E9897A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A39753361F29165700E9897A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A39753391F29165700E9897A /* Debug */ = {
@@ -272,11 +246,13 @@
 		A397533C1F29165700E9897A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Jero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.slalom.Jero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,11 +261,13 @@
 		A397533D1F29165700E9897A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Jero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.slalom.Jero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
