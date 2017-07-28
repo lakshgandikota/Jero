@@ -19,6 +19,7 @@
 /* Begin PBXFileReference section */
 		A36E002F1F2AA4E10085CD13 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		A36E00311F2BD79B0085CD13 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		A36E00331F2BFA2C0085CD13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A39373721F29637100969792 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		A39373741F299E5300969792 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		A39753291F29165700E9897A /* Jero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jero.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +67,7 @@
 				A39373741F299E5300969792 /* Window.swift */,
 				A36E002F1F2AA4E10085CD13 /* Tabs.swift */,
 				A36E00311F2BD79B0085CD13 /* Navigation.swift */,
+				A36E00331F2BFA2C0085CD13 /* README.md */,
 			);
 			path = Jero;
 			sourceTree = "<group>";
