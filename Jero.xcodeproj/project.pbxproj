@@ -43,6 +43,7 @@
 		A39753201F29165700E9897A = {
 			isa = PBXGroup;
 			children = (
+				A36E00331F2BFA2C0085CD13 /* README.md */,
 				A397532B1F29165700E9897A /* Jero */,
 				A397532A1F29165700E9897A /* Products */,
 			);
@@ -67,7 +68,6 @@
 				A39373741F299E5300969792 /* Window.swift */,
 				A36E002F1F2AA4E10085CD13 /* Tabs.swift */,
 				A36E00311F2BD79B0085CD13 /* Navigation.swift */,
-				A36E00331F2BFA2C0085CD13 /* README.md */,
 			);
 			path = Jero;
 			sourceTree = "<group>";
