@@ -22,12 +22,12 @@ class Tabs {
         tmp0ViewController?.view.backgroundColor = UIColor.brown
         
         tmp1ViewController = ViewController()
-        let tmp1NavController = UINavigationController(rootViewController: tmp1ViewController!)
+        let tmp1NavController = Navigation(rootViewController: tmp1ViewController!)
+        
         tmp1ViewController?.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
         
         viewControllerList = [tmp0ViewController!, tmp1NavController]
         
-
     }
     
 }

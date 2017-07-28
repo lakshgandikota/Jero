@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A36E00301F2AA4E10085CD13 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E002F1F2AA4E10085CD13 /* Tabs.swift */; };
+		A36E00321F2BD79B0085CD13 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E00311F2BD79B0085CD13 /* Navigation.swift */; };
 		A39373731F29637100969792 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39373721F29637100969792 /* Label.swift */; };
 		A39373751F299E5300969792 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39373741F299E5300969792 /* Window.swift */; };
 		A397532D1F29165700E9897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397532C1F29165700E9897A /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		A36E002F1F2AA4E10085CD13 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		A36E00311F2BD79B0085CD13 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		A39373721F29637100969792 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		A39373741F299E5300969792 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		A39753291F29165700E9897A /* Jero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jero.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 				A39373721F29637100969792 /* Label.swift */,
 				A39373741F299E5300969792 /* Window.swift */,
 				A36E002F1F2AA4E10085CD13 /* Tabs.swift */,
+				A36E00311F2BD79B0085CD13 /* Navigation.swift */,
 			);
 			path = Jero;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				A397532F1F29165700E9897A /* ViewController.swift in Sources */,
 				A397532D1F29165700E9897A /* AppDelegate.swift in Sources */,
 				A39373731F29637100969792 /* Label.swift in Sources */,
+				A36E00321F2BD79B0085CD13 /* Navigation.swift in Sources */,
 				A36E00301F2AA4E10085CD13 /* Tabs.swift in Sources */,
 				A39373751F299E5300969792 /* Window.swift in Sources */,
 			);

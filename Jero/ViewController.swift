@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.clear
-        super.title = "Hello World!"
+        //super.title = "Hello World!"
         let label = Label()
         view.addSubview(label)
 
