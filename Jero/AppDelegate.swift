@@ -11,15 +11,25 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: Window? = {
+        let window = Window(frame: UIScreen.main.bounds)
+        return window
+    }()
+    
+    var tabs: Tabs? = {
+        return Tabs()
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        print(#function)
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.backgroundColor = UIColor.green
+       
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = tabs?.viewControllerList as? [UIViewController]
+
+        //window?.rootViewController = UINavigationController(rootViewController: tabBarController)
+        window?.rootViewController = tabBarController
+
         window?.makeKeyAndVisible()
-        window?.rootViewController = ViewController()
-        
+
         return true
     }
 

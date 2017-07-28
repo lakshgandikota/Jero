@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A36E00301F2AA4E10085CD13 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E002F1F2AA4E10085CD13 /* Tabs.swift */; };
+		A39373731F29637100969792 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39373721F29637100969792 /* Label.swift */; };
+		A39373751F299E5300969792 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39373741F299E5300969792 /* Window.swift */; };
 		A397532D1F29165700E9897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397532C1F29165700E9897A /* AppDelegate.swift */; };
 		A397532F1F29165700E9897A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397532E1F29165700E9897A /* ViewController.swift */; };
 		A39753341F29165700E9897A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A39753331F29165700E9897A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A36E002F1F2AA4E10085CD13 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		A39373721F29637100969792 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		A39373741F299E5300969792 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		A39753291F29165700E9897A /* Jero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A397532C1F29165700E9897A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A397532E1F29165700E9897A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +60,9 @@
 				A397532E1F29165700E9897A /* ViewController.swift */,
 				A39753331F29165700E9897A /* Assets.xcassets */,
 				A39753381F29165700E9897A /* Info.plist */,
+				A39373721F29637100969792 /* Label.swift */,
+				A39373741F299E5300969792 /* Window.swift */,
+				A36E002F1F2AA4E10085CD13 /* Tabs.swift */,
 			);
 			path = Jero;
 			sourceTree = "<group>";
@@ -130,6 +139,9 @@
 			files = (
 				A397532F1F29165700E9897A /* ViewController.swift in Sources */,
 				A397532D1F29165700E9897A /* AppDelegate.swift in Sources */,
+				A39373731F29637100969792 /* Label.swift in Sources */,
+				A36E00301F2AA4E10085CD13 /* Tabs.swift in Sources */,
+				A39373751F299E5300969792 /* Window.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
