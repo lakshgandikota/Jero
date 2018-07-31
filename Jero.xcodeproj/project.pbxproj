@@ -274,10 +274,10 @@
 				DEVELOPMENT_TEAM = 3EQNPEVW28;
 				INFOPLIST_FILE = Jero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laksg.Jero;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laksg.devapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0115cd99-3053-47d2-b7af-8f235c31f293";
-				PROVISIONING_PROFILE_SPECIFIER = "COM LAKSG Development Wildcard";
+				PROVISIONING_PROFILE = "052d9e4d-d4b2-44c3-9d83-507ff6d841de";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.laksg.devapp";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -292,10 +292,10 @@
 				DEVELOPMENT_TEAM = 3EQNPEVW28;
 				INFOPLIST_FILE = Jero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laksg.Jero;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laksg.devapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0115cd99-3053-47d2-b7af-8f235c31f293";
-				PROVISIONING_PROFILE_SPECIFIER = "COM LAKSG Development Wildcard";
+				PROVISIONING_PROFILE = "052d9e4d-d4b2-44c3-9d83-507ff6d841de";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.laksg.devapp";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
