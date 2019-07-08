@@ -30,7 +30,7 @@ class Navigation: UINavigationController {
     func displayTitle() {
         
         print(#function)
-        self.navigationBar.topItem?.title = "Navigation!"
+        self.navigationBar.topItem?.title = "Prototype"
     }
     
 }
