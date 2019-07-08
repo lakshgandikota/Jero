@@ -1,0 +1,6 @@
+framework module Pods_Jero {
+  umbrella header "Pods-Jero-umbrella.h"
+
+  export *
+  module * { export * }
+}

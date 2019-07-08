@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		316D71BC22D3C2B600EC5FF6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316D71BB22D3C2B600EC5FF6 /* Launch Screen.storyboard */; };
+		6570405F7DE1E719A5E88787 /* Pods_Jero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CF70692C60FC086695D4C5 /* Pods_Jero.framework */; };
 		A36E00301F2AA4E10085CD13 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E002F1F2AA4E10085CD13 /* Tabs.swift */; };
 		A36E00321F2BD79B0085CD13 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E00311F2BD79B0085CD13 /* Navigation.swift */; };
 		A39373731F29637100969792 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39373721F29637100969792 /* Label.swift */; };
@@ -18,7 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F899F8B3FE506E3D84719FA /* Pods-Jero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jero.release.xcconfig"; path = "Target Support Files/Pods-Jero/Pods-Jero.release.xcconfig"; sourceTree = "<group>"; };
 		316D71BB22D3C2B600EC5FF6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		784765C94084464AD7F2A8D0 /* Pods-Jero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jero.debug.xcconfig"; path = "Target Support Files/Pods-Jero/Pods-Jero.debug.xcconfig"; sourceTree = "<group>"; };
 		A36E002F1F2AA4E10085CD13 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		A36E00311F2BD79B0085CD13 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		A36E00331F2BFA2C0085CD13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		A397532E1F29165700E9897A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A39753331F29165700E9897A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A39753381F29165700E9897A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8CF70692C60FC086695D4C5 /* Pods_Jero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,18 +40,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6570405F7DE1E719A5E88787 /* Pods_Jero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15FD45707CC574A9014D2E05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				784765C94084464AD7F2A8D0 /* Pods-Jero.debug.xcconfig */,
+				1F899F8B3FE506E3D84719FA /* Pods-Jero.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6D5A448E4744B69229A672BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8CF70692C60FC086695D4C5 /* Pods_Jero.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A39753201F29165700E9897A = {
 			isa = PBXGroup;
 			children = (
 				A36E00331F2BFA2C0085CD13 /* README.md */,
 				A397532B1F29165700E9897A /* Jero */,
 				A397532A1F29165700E9897A /* Products */,
+				15FD45707CC574A9014D2E05 /* Pods */,
+				6D5A448E4744B69229A672BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +107,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A397533B1F29165700E9897A /* Build configuration list for PBXNativeTarget "Jero" */;
 			buildPhases = (
+				2CC4E6A597CF97D87ED8B69E /* [CP] Check Pods Manifest.lock */,
 				A39753251F29165700E9897A /* Sources */,
 				A39753261F29165700E9897A /* Frameworks */,
 				A39753271F29165700E9897A /* Resources */,
@@ -141,6 +167,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CC4E6A597CF97D87ED8B69E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jero-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A39753251F29165700E9897A /* Sources */ = {
@@ -272,6 +323,7 @@
 		};
 		A397533C1F29165700E9897A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 784765C94084464AD7F2A8D0 /* Pods-Jero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -289,6 +341,7 @@
 		};
 		A397533D1F29165700E9897A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F899F8B3FE506E3D84719FA /* Pods-Jero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
