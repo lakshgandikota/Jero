@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		316D71BC22D3C2B600EC5FF6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316D71BB22D3C2B600EC5FF6 /* Launch Screen.storyboard */; };
 		A36E00301F2AA4E10085CD13 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E002F1F2AA4E10085CD13 /* Tabs.swift */; };
 		A36E00321F2BD79B0085CD13 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E00311F2BD79B0085CD13 /* Navigation.swift */; };
 		A39373731F29637100969792 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39373721F29637100969792 /* Label.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		316D71BB22D3C2B600EC5FF6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A36E002F1F2AA4E10085CD13 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		A36E00311F2BD79B0085CD13 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		A36E00331F2BFA2C0085CD13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				A39373741F299E5300969792 /* Window.swift */,
 				A36E002F1F2AA4E10085CD13 /* Tabs.swift */,
 				A36E00311F2BD79B0085CD13 /* Navigation.swift */,
+				316D71BB22D3C2B600EC5FF6 /* Launch Screen.storyboard */,
 			);
 			path = Jero;
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316D71BC22D3C2B600EC5FF6 /* Launch Screen.storyboard in Resources */,
 				A39753341F29165700E9897A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,12 +274,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3EQNPEVW28;
 				INFOPLIST_FILE = Jero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laksg.devapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gandikota.jero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "052d9e4d-d4b2-44c3-9d83-507ff6d841de";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.laksg.devapp";
@@ -288,12 +291,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3EQNPEVW28;
 				INFOPLIST_FILE = Jero/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laksg.devapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gandikota.jero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "052d9e4d-d4b2-44c3-9d83-507ff6d841de";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.laksg.devapp";
