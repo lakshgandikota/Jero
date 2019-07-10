@@ -14,7 +14,7 @@ class Window: UIWindow {
         super.init(frame: frame)
         
         self.clipsToBounds = true
-        self.backgroundColor = UIColor.cyan
+        self.backgroundColor = UIColor.red
         
     }
     
