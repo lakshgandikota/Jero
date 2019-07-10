@@ -4,10 +4,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: Window? = {
-        let window = Window(frame: UIScreen.main.bounds)
-        return window
-    }()
+    var window: UIWindow?
     
     var tabs: Tabs? = {
         return Tabs()
@@ -18,9 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = tabs?.viewControllerList as? [UIViewController]
 
+        window = UIWindow()
         window?.rootViewController = Navigation(rootViewController: tabBarController)
         //window?.rootViewController = tabBarController
-
+        window?.clipsToBounds = true
         window?.makeKeyAndVisible()
 
         return true
