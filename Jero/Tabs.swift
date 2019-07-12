@@ -19,7 +19,7 @@ struct Tabs {
     init() {
 
         tmp0ViewController = TableViewController()
-        //tmp0ViewController?.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
+        tmp0ViewController?.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
         //tmp0ViewController?.view.backgroundColor = UIColor.red
         
         tmp1ViewController = ViewController()
@@ -30,11 +30,7 @@ struct Tabs {
         tmp2ViewController?.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
         tmp2ViewController?.view.backgroundColor = UIColor.white
         
-        viewControllerList = [UINavigationController(rootViewController: tmp0ViewController!), UINavigationController(rootViewController: tmp1ViewController!), UINavigationController(rootViewController: tmp2ViewController!)]
-
-        tmp0ViewController?.navigationItem.title = "Prototype"
-
-        
+        viewControllerList = [UINavigationController(rootViewController: tmp0ViewController!), UINavigationController(rootViewController: tmp1ViewController!), UINavigationController(rootViewController: tmp2ViewController!)]        
         
     }
     

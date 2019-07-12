@@ -15,8 +15,20 @@ class TableViewController: UITableViewController {
         case Option2
     }
     
+    init() {
+        super.init(style: .grouped)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.cellLayoutMarginsFollowReadableWidth = false
+        navigationItem.title = "TableView"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
