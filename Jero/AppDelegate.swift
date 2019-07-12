@@ -16,8 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarController.viewControllers = tabs?.viewControllerList as? [UIViewController]
 
         window = UIWindow()
-        window?.rootViewController = Navigation(rootViewController: tabBarController)
-        //window?.rootViewController = tabBarController
+        window?.rootViewController = tabBarController
         window?.clipsToBounds = true
         window?.makeKeyAndVisible()
 
