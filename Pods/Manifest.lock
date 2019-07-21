@@ -1,3 +1,18 @@
-PODFILE CHECKSUM: b868f32645f949df4e04821742bc864845cad7af
+PODS:
+  - TeslaSwift (6.0.0):
+    - TeslaSwift/Core (= 6.0.0)
+  - TeslaSwift/Core (6.0.0)
 
-COCOAPODS: 1.7.3
+DEPENDENCIES:
+  - TeslaSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - TeslaSwift
+
+SPEC CHECKSUMS:
+  TeslaSwift: bf1f4319a85df4d8c9affbe6ea9bc4bc2fca7fe4
+
+PODFILE CHECKSUM: c9239a7726ce4a98c375df3b76451fbedc70871e
+
+COCOAPODS: 1.7.5

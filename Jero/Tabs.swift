@@ -10,8 +10,8 @@ import UIKit
 
 struct Tabs {
     
-    var tmp0ViewController: UITableViewController?
-    var tmp1ViewController: ViewController?
+    var tmp0ViewController: TeslaViewController?
+    var tmp1ViewController: UITableViewController?
     var tmp2ViewController: ViewController?
     var tmp3ViewController: ViewController?
     var tmp4ViewController: ViewController?
@@ -20,11 +20,11 @@ struct Tabs {
     
     init() {
 
-        tmp0ViewController = TableViewController()
+        tmp0ViewController = TeslaViewController()
         tmp0ViewController?.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
         //tmp0ViewController?.view.backgroundColor = UIColor.red
         
-        tmp1ViewController = ViewController()
+        tmp1ViewController = TableViewController()
         tmp1ViewController?.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 1)
         tmp1ViewController?.view.backgroundColor = UIColor.green
         
