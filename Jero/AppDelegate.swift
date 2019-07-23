@@ -6,20 +6,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var tabs: Tabs? = {
-        return Tabs()
-    }()
+    var tmp1ViewController: UITableViewController?
+    
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
        
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = tabs?.viewControllerList as? [UIViewController]
-
+        tmp1ViewController = TableViewController()
+        tmp1ViewController?.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 1)
+        
         window = UIWindow()
-        window?.rootViewController = tabBarController
+        window?.rootViewController = UINavigationController(rootViewController: tmp1ViewController!)
         window?.clipsToBounds = true
         window?.makeKeyAndVisible()
-
+        
         return true
     }
 

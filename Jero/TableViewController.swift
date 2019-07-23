@@ -28,7 +28,7 @@ class TableViewController: UITableViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.cellLayoutMarginsFollowReadableWidth = false
-        navigationItem.title = "TableView"
+        navigationItem.title = "BT"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
