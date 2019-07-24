@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController: UITableViewController {
 
+    var managedContext: NSManagedObjectContext!
+    
     enum items: String, CaseIterable {
         case Loading
     }

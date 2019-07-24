@@ -10,6 +10,10 @@
 		316D71BC22D3C2B600EC5FF6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316D71BB22D3C2B600EC5FF6 /* Launch Screen.storyboard */; };
 		31B9C21A22D91BE0000558AB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B9C21922D91BE0000558AB /* TableViewController.swift */; };
 		6570405F7DE1E719A5E88787 /* Pods_Jero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CF70692C60FC086695D4C5 /* Pods_Jero.framework */; };
+		A349087622E83C5D0039B632 /* Log.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A349087422E83C5D0039B632 /* Log.xcdatamodeld */; };
+		A349088422E83D280039B632 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A349088322E83D280039B632 /* CoreDataStack.swift */; };
+		A361B23C22E8463100EE3AF4 /* AllBackground+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A361B23A22E8463100EE3AF4 /* AllBackground+CoreDataClass.swift */; };
+		A361B23D22E8463100EE3AF4 /* AllBackground+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A361B23B22E8463100EE3AF4 /* AllBackground+CoreDataProperties.swift */; };
 		A397532D1F29165700E9897A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397532C1F29165700E9897A /* AppDelegate.swift */; };
 		A39753341F29165700E9897A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A39753331F29165700E9897A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -19,6 +23,10 @@
 		316D71BB22D3C2B600EC5FF6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		31B9C21922D91BE0000558AB /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		784765C94084464AD7F2A8D0 /* Pods-Jero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jero.debug.xcconfig"; path = "Target Support Files/Pods-Jero/Pods-Jero.debug.xcconfig"; sourceTree = "<group>"; };
+		A349087522E83C5D0039B632 /* Log.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Log.xcdatamodel; sourceTree = "<group>"; };
+		A349088322E83D280039B632 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		A361B23A22E8463100EE3AF4 /* AllBackground+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllBackground+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A361B23B22E8463100EE3AF4 /* AllBackground+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllBackground+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A36E00331F2BFA2C0085CD13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A39753291F29165700E9897A /* Jero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A397532C1F29165700E9897A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,11 +90,15 @@
 		A397532B1F29165700E9897A /* Jero */ = {
 			isa = PBXGroup;
 			children = (
+				A361B23A22E8463100EE3AF4 /* AllBackground+CoreDataClass.swift */,
+				A361B23B22E8463100EE3AF4 /* AllBackground+CoreDataProperties.swift */,
+				A349088322E83D280039B632 /* CoreDataStack.swift */,
 				A397532C1F29165700E9897A /* AppDelegate.swift */,
 				31B9C21922D91BE0000558AB /* TableViewController.swift */,
 				A39753331F29165700E9897A /* Assets.xcassets */,
 				A39753381F29165700E9897A /* Info.plist */,
 				316D71BB22D3C2B600EC5FF6 /* Launch Screen.storyboard */,
+				A349087422E83C5D0039B632 /* Log.xcdatamodeld */,
 			);
 			path = Jero;
 			sourceTree = "<group>";
@@ -190,7 +202,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A397532D1F29165700E9897A /* AppDelegate.swift in Sources */,
+				A361B23C22E8463100EE3AF4 /* AllBackground+CoreDataClass.swift in Sources */,
+				A349088422E83D280039B632 /* CoreDataStack.swift in Sources */,
+				A349087622E83C5D0039B632 /* Log.xcdatamodeld in Sources */,
 				31B9C21A22D91BE0000558AB /* TableViewController.swift in Sources */,
+				A361B23D22E8463100EE3AF4 /* AllBackground+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +386,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A349087422E83C5D0039B632 /* Log.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A349087522E83C5D0039B632 /* Log.xcdatamodel */,
+			);
+			currentVersion = A349087522E83C5D0039B632 /* Log.xcdatamodel */;
+			path = Log.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A39753211F29165700E9897A /* Project object */;
 }

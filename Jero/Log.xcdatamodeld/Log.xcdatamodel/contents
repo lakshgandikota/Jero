@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14877.5" systemVersion="18G84" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AllBackground" representedClassName="AllBackground" syncable="YES">
+        <attribute name="dt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="log" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="AllBackground" positionX="-63" positionY="-18" width="128" height="73"/>
+    </elements>
+</model>
