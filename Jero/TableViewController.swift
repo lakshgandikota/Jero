@@ -7,14 +7,11 @@
 //
 
 import UIKit
-import CoreBluetooth
 
 class TableViewController: UITableViewController {
-    
-    var centralManager: CBCentralManager!
-    
+
     enum items: String, CaseIterable {
-        case Searching
+        case Loading
     }
     
     init() {
@@ -27,11 +24,10 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        centralManager = CBCentralManager(delegate: self, queue: nil)
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.cellLayoutMarginsFollowReadableWidth = false
-        navigationItem.title = "BT"
+        navigationItem.title = "Core Data Log"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,38 +42,5 @@ class TableViewController: UITableViewController {
         return cell
         
     }
-}
-
-
-extension TableViewController: CBCentralManagerDelegate {
-        
-    func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        switch central.state {
-        case .unknown:
-            print("Central stats is unknown")
-        case .resetting:
-            print("State is resetting")
-        case .unsupported:
-            print("State is unsupported")
-        case .unauthorized:
-            print("State is unauthorized")
-        case .poweredOff:
-            print("State is Powered OFF")
-        case .poweredOn:
-            print("State is Powered On")
-            centralManager.scanForPeripherals(withServices: nil, options: nil)
-        }
-    }
-    
-    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        print("Disconnected")
-    }
-    
-    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        print(peripheral)
-        //centralManager.stopScan()
-    }
-
-
 }
 
