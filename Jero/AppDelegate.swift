@@ -1,5 +1,6 @@
 
 import UIKit
+import ConsoleLog
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.clipsToBounds = true
         window?.makeKeyAndVisible()
 
+        ConsoleLog.shared.show()
+        
         return true
     }
 

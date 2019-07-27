@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreBluetooth
+import ConsoleLog
 
 class TableViewController: UITableViewController {
     
@@ -66,15 +67,23 @@ extension TableViewController: CBCentralManagerDelegate {
         case .poweredOn:
             print("State is Powered On")
             centralManager.scanForPeripherals(withServices: nil, options: nil)
+        @unknown default:
+            fatalError()
         }
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         print("Disconnected")
+        ConsoleLog.shared.warning("disconnected")
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        print(peripheral)
+        
+        
+        ConsoleLog.shared.info("\(String(describing: peripheral.name)) \(peripheral.identifier) \(peripheral.state.rawValue) \(advertisementData) \(RSSI)")
+
+        print(peripheral.description)
+
         //centralManager.stopScan()
     }
 
