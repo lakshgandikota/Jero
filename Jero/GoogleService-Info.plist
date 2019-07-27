@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>935715817848-hk680v7mdiflrubto4lk8q1kjsl9m4qq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.935715817848-hk680v7mdiflrubto4lk8q1kjsl9m4qq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAGLr14qHMTJZzyMCX08-a9zcHXq4gzJZ4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>935715817848</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gandikota.pp</string>
+	<key>PROJECT_ID</key>
+	<string>pellipustakam-bf2db</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pellipustakam-bf2db.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:935715817848:ios:ae327150f8530831</string>
+	<key>DATABASE_URL</key>
+	<string>https://pellipustakam-bf2db.firebaseio.com</string>
+</dict>
+</plist>

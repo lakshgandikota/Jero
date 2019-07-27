@@ -1,5 +1,6 @@
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,12 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = tabs?.viewControllerList as? [UIViewController]
-
+        FirebaseApp.configure()
+        
         window = UIWindow()
         window?.rootViewController = tabBarController
         window?.clipsToBounds = true
         window?.makeKeyAndVisible()
-
+        
         return true
     }
 
