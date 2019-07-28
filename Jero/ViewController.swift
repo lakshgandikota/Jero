@@ -13,7 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let label = UILabel()
-        label.text = "Nothing here."
+        label.numberOfLines = 2
+        label.text = "Nothing here. \nIts all in the Console logs."
+        label.textAlignment = .center
+        label.sizeToFit()
         label.textColor = .gray
         view.addSubview(label)
 

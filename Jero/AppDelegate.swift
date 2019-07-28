@@ -9,17 +9,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var remoteConfig: RemoteConfig?
     
-    var tabs: Tabs? = {
-        return Tabs()
-    }()
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         FirebaseApp.configure()
+        
+        /* Remote Config - START */
         remoteConfig = RemoteConfig.remoteConfig()
         
         let settings = RemoteConfigSettings()
-        settings.minimumFetchInterval = 0
+        settings.minimumFetchInterval = 86400
                 
         remoteConfig?.configSettings = settings
         remoteConfig?.setDefaults(["t_client_id" : "Test" as NSObject])
@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              if status == .success {
                print("Config fetched!")
                 self.remoteConfig?.activate(completionHandler: { (error) in
-                    print(self.remoteConfig?["t_client_secret"].stringValue)
+                    print(self.remoteConfig?["t_client_secret"].stringValue ?? "NA")
                })
              } else {
                print("Config not fetched")
@@ -36,7 +36,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              }
            }
         
+        /* Remote config - END*/
+        /* Auth START*/
+        Auth.auth().signInAnonymously() { (authResult, error) in
+            
+            if let authResult = authResult {
+                print("AUTH: \(authResult.user) \(authResult.user.isAnonymous) \(authResult.user.uid) ")
+
+            }
+            
+        }
+        /* Auth END*/
         
+        /* Crash START*/
+        // Fabric.sharedSDK().debug = true
+        /* Crash END*/
         let mainViewController = ViewController()
         mainViewController.view.backgroundColor = .black
 
