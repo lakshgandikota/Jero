@@ -13,6 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
+        
+
+        
         FirebaseApp.configure()
         
         /* Remote Config - START */
@@ -26,9 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         remoteConfig?.fetch(withExpirationDuration: TimeInterval(0)) { (status, error) -> Void in
              if status == .success {
-               print("Config fetched!")
                 self.remoteConfig?.activate(completionHandler: { (error) in
-                    print(self.remoteConfig?["t_client_secret"].stringValue ?? "NA")
+                    print("End of CONFIG FETCH\(self.remoteConfig?["t_client_secret"].stringValue ?? "NA")")
                })
              } else {
                print("Config not fetched")
@@ -41,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Auth.auth().signInAnonymously() { (authResult, error) in
             
             if let authResult = authResult {
-                print("AUTH: \(authResult.user) \(authResult.user.isAnonymous) \(authResult.user.uid) ")
+                print("End of AUTH: \(authResult.user) \(authResult.user.isAnonymous) \(authResult.user.uid) ")
 
             }
             
@@ -51,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /* Crash START*/
         // Fabric.sharedSDK().debug = true
         /* Crash END*/
+        
         let mainViewController = ViewController()
         mainViewController.view.backgroundColor = .black
 
@@ -59,9 +63,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.clipsToBounds = true
         window?.makeKeyAndVisible()
         
+        print("End of DIDFINISHLAUNCHING")
+        
         return true
     }
 
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("End of BACKGROUNDFETCH")
+        completionHandler(.newData)
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         print(#function)
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
