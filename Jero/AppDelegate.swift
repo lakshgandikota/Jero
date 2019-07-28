@@ -7,6 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    var remoteConfig: RemoteConfig?
     var tabs: Tabs? = {
         return Tabs()
     }()
@@ -16,6 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = tabs?.viewControllerList as? [UIViewController]
         FirebaseApp.configure()
+        remoteConfig = RemoteConfig.remoteConfig()
+        
+        let settings = RemoteConfigSettings()
+        settings.minimumFetchInterval = 0
+                
+        remoteConfig?.configSettings = settings
+        remoteConfig?.setDefaults(["t_client_id" : "Test" as NSObject])
+        
+        remoteConfig?.fetch(withExpirationDuration: TimeInterval(0)) { (status, error) -> Void in
+             if status == .success {
+               print("Config fetched!")
+                self.remoteConfig?.activate(completionHandler: { (error) in
+                    print(self.remoteConfig?["t_client_secret"].stringValue)
+               })
+             } else {
+               print("Config not fetched")
+               print("Error: \(error?.localizedDescription ?? "No error available.")")
+             }
+           }
         
         window = UIWindow()
         window?.rootViewController = tabBarController
