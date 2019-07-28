@@ -8,14 +8,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var remoteConfig: RemoteConfig?
+    
     var tabs: Tabs? = {
         return Tabs()
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-       
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = tabs?.viewControllerList as? [UIViewController]
+
         FirebaseApp.configure()
         remoteConfig = RemoteConfig.remoteConfig()
         
@@ -37,8 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              }
            }
         
+        
+        let mainViewController = ViewController()
+        mainViewController.view.backgroundColor = .black
+
         window = UIWindow()
-        window?.rootViewController = tabBarController
+        window?.rootViewController = UINavigationController(rootViewController: mainViewController)
         window?.clipsToBounds = true
         window?.makeKeyAndVisible()
         

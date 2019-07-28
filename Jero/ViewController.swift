@@ -12,12 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let label = Label()
+        let label = UILabel()
+        label.text = "Nothing here."
+        label.textColor = .gray
         view.addSubview(label)
 
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        self.navigationItem.title = "Background"
         
     }
 
