@@ -9,4 +9,6 @@ target 'Jero' do
   pod 'Fabric', '~> 1.10.2'
   pod 'Crashlytics', '~> 3.13.4'
   pod 'Firebase/Auth'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
 end
