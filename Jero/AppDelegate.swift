@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var remoteConfig: RemoteConfig?
     
-    
+    let dispatchgroup = DispatchGroup()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -27,26 +27,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
         remoteConfig?.configSettings = settings
         remoteConfig?.setDefaults(["t_client_id" : "Test" as NSObject])
-        
+
+        dispatchgroup.enter()
         remoteConfig?.fetch(withExpirationDuration: TimeInterval(0)) { (status, error) -> Void in
-             if status == .success {
+            if status == .success {
                 self.remoteConfig?.activate(completionHandler: { (error) in
                     print("End of CONFIG FETCH\(self.remoteConfig?["t_client_secret"].stringValue ?? "NA")")
-               })
-             } else {
-               print("Config not fetched")
-               print("Error: \(error?.localizedDescription ?? "No error available.")")
-             }
-           }
-        
+                   
+                })
+            } else {
+                print("Config not fetched")
+                print("Error: \(error?.localizedDescription ?? "No error available.")")
+                
+            }
+            self.dispatchgroup.leave()
+        }
         /* Remote config - END*/
+
+
         /* Auth START*/
+        dispatchgroup.enter()
         Auth.auth().signInAnonymously() { (authResult, error) in
             
             if let authResult = authResult {
                 print("End of AUTH: \(authResult.user) \(authResult.user.isAnonymous) \(authResult.user.uid) ")
-
+                
             }
+            self.dispatchgroup.leave()
             
         }
         /* Auth END*/
@@ -54,6 +61,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /* Crash START*/
         // Fabric.sharedSDK().debug = true
         /* Crash END*/
+        
+        /* Firestore START*/
+        
+        let db = Firestore.firestore()
+        print(db)
+        // Add a new document with a generated ID
+        var ref: DocumentReference? = nil
+        dispatchgroup.enter()
+        ref = db.collection("log").addDocument(data: [
+            "datetime": Date()
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+            self.dispatchgroup.leave()
+        }
+        
+        /* Firestore END */
+        
         
         let mainViewController = ViewController()
         mainViewController.view.backgroundColor = .black
@@ -69,8 +97,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        print("End of BACKGROUNDFETCH")
-        completionHandler(.newData)
+        
+        dispatchgroup.notify(queue: .main) {
+            print("End of BACKGROUNDFETCH")
+            completionHandler(.newData)
+        }
+        
+
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
