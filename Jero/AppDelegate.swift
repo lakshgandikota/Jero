@@ -1,6 +1,8 @@
 
 import UIKit
 import Firebase
+import CoreMotion
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -8,6 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var remoteConfig: RemoteConfig?
+    let manager = CMMotionActivityManager()
     
     let dispatchgroup = DispatchGroup()
     
@@ -82,6 +85,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /* Firestore END */
         
+        /* CoreMotion START*/
+        
+        manager.startActivityUpdates(to: .main) { (activity) in
+            guard let activity = activity else {
+                return
+            }
+
+            var modes: Set<String> = []
+            if activity.walking {
+                modes.insert("🚶‍")
+            }
+
+            if activity.running {
+                modes.insert("🏃‍")
+            }
+
+            if activity.cycling {
+                modes.insert("🚴‍")
+            }
+
+            if activity.automotive {
+                modes.insert("🚗")
+            }
+
+            if activity.stationary {
+                modes.insert("Stationary")
+            }
+            
+            print("Activity: \(modes.joined(separator: ", "))")
+
+        }
+        
+        /* coreMotion END */
         
         let mainViewController = ViewController()
         mainViewController.view.backgroundColor = .black
