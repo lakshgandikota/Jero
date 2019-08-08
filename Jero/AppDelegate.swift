@@ -15,9 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = tabs?.viewControllerList as? [UIViewController]
 
-        window = UIWindow()
-        window?.rootViewController = tabBarController
-        window?.clipsToBounds = true
+        window = {
+            let window = UIWindow(frame: UIScreen.main.bounds)
+            window.clipsToBounds = true
+            window.rootViewController = tabBarController
+            return window
+        }()
+
         window?.makeKeyAndVisible()
 
         return true
