@@ -15,10 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let dispatchgroup = DispatchGroup()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
         
-
+        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
         
         FirebaseApp.configure()
         
@@ -26,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         remoteConfig = RemoteConfig.remoteConfig()
         
         let settings = RemoteConfigSettings()
-        settings.minimumFetchInterval = 86400
+        settings.minimumFetchInterval = 0
                 
         remoteConfig?.configSettings = settings
         remoteConfig?.setDefaults(["t_client_id" : "Test" as NSObject])
@@ -35,12 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         remoteConfig?.fetch(withExpirationDuration: TimeInterval(0)) { (status, error) -> Void in
             if status == .success {
                 self.remoteConfig?.activate(completionHandler: { (error) in
-                    print("End of CONFIG FETCH\(self.remoteConfig?["t_client_secret"].stringValue ?? "NA")")
+                    print("\n\nJero>> End of CONFIG FETCH\(self.remoteConfig?["t_client_secret"].stringValue ?? "NA")")
                    
                 })
             } else {
-                print("Config not fetched")
-                print("Error: \(error?.localizedDescription ?? "No error available.")")
+                print("\n\nJero>> Config not fetched")
+                print("\n\nJero>> Error: \(error?.localizedDescription ?? "No error available.")")
                 
             }
             self.dispatchgroup.leave()
@@ -53,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Auth.auth().signInAnonymously() { (authResult, error) in
             
             if let authResult = authResult {
-                print("End of AUTH: \(authResult.user) \(authResult.user.isAnonymous) \(authResult.user.uid) ")
+                print("\n\nJero>> End of AUTH: \(authResult.user) \(authResult.user.isAnonymous) \(authResult.user.uid) ")
                 
             }
             self.dispatchgroup.leave()
@@ -68,7 +66,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /* Firestore START*/
         
         let db = Firestore.firestore()
-        print(db)
         // Add a new document with a generated ID
         var ref: DocumentReference? = nil
         dispatchgroup.enter()
@@ -76,9 +73,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "datetime": Date()
         ]) { err in
             if let err = err {
-                print("Error adding document: \(err)")
+                print("\n\nJero>> Error adding document: \(err)")
             } else {
-                print("Document added with ID: \(ref!.documentID)")
+                print("\n\nJero>> Document added with ID: \(ref!.documentID)")
             }
             self.dispatchgroup.leave()
         }
@@ -94,26 +91,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             var modes: Set<String> = []
             if activity.walking {
-                modes.insert("🚶‍")
+                modes.insert("walking")
             }
 
             if activity.running {
-                modes.insert("🏃‍")
+                modes.insert("running")
             }
 
             if activity.cycling {
-                modes.insert("🚴‍")
+                modes.insert("cycling")
             }
 
             if activity.automotive {
-                modes.insert("🚗")
+                modes.insert("auto")
             }
 
             if activity.stationary {
-                modes.insert("Stationary")
+                modes.insert("stationary")
             }
             
-            print("Activity: \(modes.joined(separator: ", "))")
+            print("\n\nJero>> Activity: \(modes.joined(separator: ", "))")
 
         }
         
@@ -122,12 +119,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainViewController = ViewController()
         mainViewController.view.backgroundColor = .black
 
-        window = UIWindow()
-        window?.rootViewController = UINavigationController(rootViewController: mainViewController)
-        window?.clipsToBounds = true
+        window = {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = UINavigationController(rootViewController: mainViewController)
+            window?.clipsToBounds = true
+            return window
+        }()
+
         window?.makeKeyAndVisible()
         
-        print("End of DIDFINISHLAUNCHING")
+        print("\n\nJero>> End of DIDFINISHLAUNCHING")
         
         return true
     }
@@ -135,7 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
         dispatchgroup.notify(queue: .main) {
-            print("End of BACKGROUNDFETCH")
+            print("\n\nJero>> End of BACKGROUNDFETCH\n\n")
             completionHandler(.newData)
         }
         
