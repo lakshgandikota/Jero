@@ -3,7 +3,6 @@ import UIKit
 import Firebase
 import CoreMotion
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -122,9 +121,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainViewController = ViewController()
         mainViewController.view.backgroundColor = .black
 
-        window = UIWindow()
-        window?.rootViewController = UINavigationController(rootViewController: mainViewController)
-        window?.clipsToBounds = true
+        window = {
+            let window = UIWindow(frame: UIScreen.main.bounds)
+            window.clipsToBounds = true
+            window.rootViewController = mainViewController
+            return window
+        }()
+
         window?.makeKeyAndVisible()
         
         print("End of DIDFINISHLAUNCHING")
